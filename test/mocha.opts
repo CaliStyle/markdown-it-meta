@@ -1,0 +1,9 @@
+--reporter spec
+--recursive
+--full-trace
+--no-exit
+--slow 50
+--timeout 10000
+--check-leaks
+--globals app
+--fgrep app.js --invert

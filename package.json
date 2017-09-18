@@ -16,5 +16,14 @@
     "markdown"
   ],
   "author": "scott-wyatt",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.0.0",
+    "assert": "^1.4.1",
+    "markdown-it": "^8.4.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "eslint --fix . && mocha"
+  }
 }
