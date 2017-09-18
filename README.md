@@ -1,6 +1,9 @@
 # Markdown-it-meta
 Markdown-it plugin to add YAML metadata
 
+[![NPM version][npm-image]][npm-url]
+[![Build status][ci-image]][ci-url]
+
 ## Install
 ```sh
 $ npm install markdown-it-meta --save
@@ -43,3 +46,9 @@ demographics:
 ---
 ## Hello World
 ```
+
+
+[npm-image]: https://img.shields.io/npm/v/markdown-it-meta.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/markdown-it-meta
+[ci-image]: https://img.shields.io/circleci/project/github/CaliStyle/markdown-it-meta/master.svg
+[ci-url]: https://circleci.com/gh/CaliStyle/markdown-it-meta/tree/master
