@@ -2,7 +2,7 @@
   "name": "markdown-it-meta",
   "version": "0.0.1",
   "scripts": {
-    "start": "index.js"
+    "test": "eslint --fix . && mocha"
   },
   "dependencies": {
     "js-yaml": "^3.8.1"
@@ -18,12 +18,10 @@
   "author": "scott-wyatt",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.0.0",
     "assert": "^1.4.1",
+    "eslint": "^3.19.0",
+    "eslint-config-trails": "^3.0.0",
     "markdown-it": "^8.4.0",
     "mocha": "^2.4.5"
-  },
-  "scripts": {
-    "test": "eslint --fix . && mocha"
   }
 }

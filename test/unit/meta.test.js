@@ -1,49 +1,44 @@
-'use strict';
+'use strict'
 /* global describe, it */
-const fs = require('fs');
-const path = require('path');
-const assert = require('assert');
-const MarkdownIt = require('markdown-it');
-const meta = require('../../');
+const fs = require('fs')
+const path = require('path')
+const assert = require('assert')
+const MarkdownIt = require('markdown-it')
+const meta = require('../../')
 
 function fixture(name) {
-    return fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8');
+  return fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8')
 }
 
 describe('Meta', () => {
     // Make new instance
-    const md = new MarkdownIt({
-        html: true
-    });
+  const md = new MarkdownIt({
+    html: true
+  })
     // Add markdown-it-meta
-    md.use(meta);
+  md.use(meta)
 
-    it('should render the document and meta', (done) => {
-        const mdText = fixture('../../fixtures/0.0.1.md');
-        const renderedDocument =  md.render(mdText);
-        // const res = {
-        //     document: renderedDocument,
-        //     meta: md.meta
-        // };
-        // console.log(res);
+  it('should render the document and meta', (done) => {
+    const mdText = fixture('../../fixtures/0.0.1.md')
+    const renderedDocument =  md.render(mdText)
 
-        const expectedHtml = [
-            '<hello>',
-            '</hello>',
-            '<hello-world>',
-            '</hello-world>',
-            '<hello-earth>',
-            'My Name is Scott',
-            '</hello-earth>',
-            '<hello-mars [awesome]="yes">',
-            '</hello-mars>',
-            ''
-        ].join('\n');
+    const expectedHtml = [
+      '<hello>',
+      '</hello>',
+      '<hello-world>',
+      '</hello-world>',
+      '<hello-earth>',
+      'My Name is Scott',
+      '</hello-earth>',
+      '<hello-mars [awesome]="yes">',
+      '</hello-mars>',
+      ''
+    ].join('\n')
 
-        assert.equal(expectedHtml, renderedDocument);
-        assert.equal(md.meta.title, 'Homepage Hello World');
-        assert.equal(md.meta.keywords, 'proxy-engine, amazing, does html');
+    assert.equal(expectedHtml, renderedDocument)
+    assert.equal(md.meta.title, 'Homepage Hello World')
+    assert.equal(md.meta.keywords, 'proxy-engine, amazing, does html')
 
-        done();
-    });
-});
+    done()
+  })
+})
