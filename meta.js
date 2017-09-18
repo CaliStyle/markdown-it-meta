@@ -23,7 +23,7 @@ function meta(md, state, start, end, silent) {
     return false
   }
   const data = []
-  let line = start
+  const line = start
   while (line < end) {
     line++
     const str = get(state, line)
