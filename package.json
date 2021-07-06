@@ -16,6 +16,9 @@
     "markdown"
   ],
   "author": "scott-wyatt",
+  "contributors": [
+    "Lucian I. Last <li@last.nl>"
+  ],
   "license": "MIT",
   "devDependencies": {
     "assert": "^1.4.1",
