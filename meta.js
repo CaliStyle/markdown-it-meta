@@ -20,6 +20,7 @@ function meta(md, state, start, end, silent) {
     return false
   }
   if (!get(state, start).match(/^---$/)) {
+    md.meta = {}
     return false
   }
   const data = []
