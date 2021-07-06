@@ -38,7 +38,7 @@ describe('Meta', () => {
     assert.strictEqual(expectedHtml, renderedDocument)
     assert.strictEqual(md.meta.title, 'Homepage Hello World')
     assert.strictEqual(md.meta.keywords, 'proxy-engine, amazing, does html')
-
+    assert.deepStrictEqual(md.meta.tags, ['spaces', 'of', 'two'])
     done()
   })
 })
