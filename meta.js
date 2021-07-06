@@ -20,7 +20,9 @@ function meta(md, state, start, end, silent) {
     return false
   }
   if (!get(state, start).match(/^---$/)) {
+    // Fix bug that if no meta is included the meta from the previous run is used
     md.meta = {}
+
     return false
   }
   const data = []
