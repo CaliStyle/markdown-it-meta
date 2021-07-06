@@ -20,6 +20,9 @@ function meta(md, state, start, end, silent) {
     return false
   }
   if (!get(state, start).match(/^---$/)) {
+    // Fix bug that if no meta is included the meta from the previous run is used
+    md.meta = {}
+
     return false
   }
   const data = []
@@ -40,7 +43,7 @@ function meta(md, state, start, end, silent) {
   //   return false
   // }
 
-  md.meta = YAML.safeLoad(data.join('\n'), {json: true}) || {}
+  md.meta = YAML.load(data.join('\n'), {json: true}) || {}
   state.line = line + 1
   return true
 }
