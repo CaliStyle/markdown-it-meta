@@ -40,7 +40,7 @@ function meta(md, state, start, end, silent) {
   //   return false
   // }
 
-  md.meta = YAML.safeLoad(data.join('\n'), {json: true}) || {}
+  md.meta = YAML.load(data.join('\n'), {json: true}) || {}
   state.line = line + 1
   return true
 }

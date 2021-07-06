@@ -5,7 +5,7 @@
     "test": "eslint --fix . && mocha"
   },
   "dependencies": {
-    "js-yaml": "^3.8.1"
+    "js-yaml": "^4.1.0"
   },
   "description": "Markdown-it Metadata as yaml for markdown documents",
   "main": "index.js",
