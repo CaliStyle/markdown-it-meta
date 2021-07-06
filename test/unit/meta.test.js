@@ -35,9 +35,9 @@ describe('Meta', () => {
       ''
     ].join('\n')
 
-    assert.equal(expectedHtml, renderedDocument)
-    assert.equal(md.meta.title, 'Homepage Hello World')
-    assert.equal(md.meta.keywords, 'proxy-engine, amazing, does html')
+    assert.strictEqual(expectedHtml, renderedDocument)
+    assert.strictEqual(md.meta.title, 'Homepage Hello World')
+    assert.strictEqual(md.meta.keywords, 'proxy-engine, amazing, does html')
 
     done()
   })
