@@ -21,7 +21,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "assert": "^1.4.1",
     "eslint": "^7.30.0",
     "eslint-config-trails": "^3.0.0",
     "markdown-it": "^8.4.0",
