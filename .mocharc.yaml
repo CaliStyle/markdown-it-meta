@@ -1,0 +1,11 @@
+reporter: "spec"
+recursive: true
+full-trace: true
+exit: false
+slow: 50
+timeout: 10000
+check-leaks: true
+global:
+  - "app"
+spec:
+  - "test/unit/**/*.test.js"
