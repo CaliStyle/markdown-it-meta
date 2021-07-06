@@ -11,11 +11,11 @@ function fixture(name) {
 }
 
 describe('Meta', () => {
-    // Make new instance
+  // Make new instance
   const md = new MarkdownIt({
     html: true
   })
-    // Add markdown-it-meta
+  // Add markdown-it-meta
   md.use(meta)
 
   it('should render the document and meta', (done) => {
