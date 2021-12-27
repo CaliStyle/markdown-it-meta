@@ -19,7 +19,7 @@ function meta(md, state, start, end, silent) {
   if (state.tShift[start] < 0) {
     return false
   }
-  if (!get(state, start).match(/^---$/)) {
+  if (!get(state, start).match(/^---\s*$/)) {
     return false
   }
   const data = []
@@ -27,7 +27,7 @@ function meta(md, state, start, end, silent) {
   while (line < end) {
     line++
     const str = get(state, line)
-    if (str.match(/^---$/)) {
+    if (str.match(/^---\s*$/)) {
       break
     }
     if (state.tShift[line] < 0) {
